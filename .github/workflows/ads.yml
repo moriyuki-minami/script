@@ -43,4 +43,4 @@ jobs:
           
       - name: run python
         run: |
-          pytest
+          pytest -p no:cacheprovider ./doreming_shukkin.py
