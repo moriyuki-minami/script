@@ -17,7 +17,8 @@ jobs:
         run: |
           pwd
           ls
-          grep `date "+%Y/%-m/%-d",` ./holidays.csv 
+          grep `date "+%Y/%-m/%-d",` ./holidays.csv > ./grep_result
+          cat ./grep_result
           
       - name: echo csv
         run: |
