@@ -36,15 +36,9 @@ jobs:
           
       - name: do
         run: |
-          pwd
-          ls
           day=`date "+%Y\/%-m\/%-d"`
-          echo ${day}
           cat ./holidays.csv | sed -n -E -e "/${day},/p" > ./sed_result
-          ls -la
-          cat ./sed_result
           sr=`cat ./sed_result`
-          echo ${sr}
           
           if [ -n "$sr" ]; then
             echo ${sr}
