@@ -21,4 +21,4 @@ jobs:
           
       - name: echo csv
         run: |
-          echo "$csv"
+          echo "${csv}"
