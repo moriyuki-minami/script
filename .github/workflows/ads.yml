@@ -21,6 +21,7 @@ jobs:
           day=`date "+%Y\/%-m\/%-d"`
           echo ${day}
           cat ./holidays.csv | sed -n -E -e '/$day,/p' > ./grep_result
+          
           cat ./grep_result
           
       - name: echo csv
