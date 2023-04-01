@@ -1,20 +1,20 @@
 name: auto_doreming_shussha
-on:
-  schedule:
-    - cron: '0 0 * * 1,2,3,4,5'
+
+on: [ workflow_dispatch ]
+
+#on:
+#  schedule:
+#   - cron: '0 0 * * 1,2,3,4,5'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install dependencies
+      - name: read csv
         run: |
-          # pip更新
-          python -m pip install --upgrade pip
-          # 必要なパッケージインストール・・・②
+          csv=`cat ./holidays.csv`
 
-      - name: Run script
+      - name: echo csv
         run: |
-          # 定期実行するファイルを指定。・・・③
-          python 定期実行するファイル
+          echo "$csv"
