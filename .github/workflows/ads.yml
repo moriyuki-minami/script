@@ -38,6 +38,9 @@ jobs:
           
           if [ -n "$sr" ]; then
             echo ${sr}
-          else
-            pytest
+            exit 0
           fi
+          
+      - name: run python
+        run: |
+          pytest
