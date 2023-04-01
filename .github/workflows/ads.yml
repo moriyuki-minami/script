@@ -13,16 +13,24 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       
-      - name: grep
+      - name: do
         run: |
           pwd
           ls
-          #grep `date "+%Y/%-m/%-d",` ./holidays.csv > ./grep_result
           day=`date "+%Y\/%-m\/%-d"`
           echo ${day}
-          cat ./holidays.csv | sed -n -E -e "/${day},/p" > ./grep_result
+          cat ./holidays.csv | sed -n -E -e "/${day},/p" > ./sed_result
           ls -la
-          cat ./grep_result
+          cat ./sed_result
+          sr=`cat ./sed_result`
+          echo ${sr}
+          
+          if [ -n "$sr" ]; then
+            echo ${sr}
+          else
+            echo "0 byte"
+          fi
+          
           
       - name: echo csv
         run: |
