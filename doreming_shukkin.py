@@ -4,7 +4,7 @@ sys.dont_write_bytecode = True
 import pytest
 import time
 import json
-import chromedriver_binary
+from get_chrome_driver import GetChromeDriver
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
