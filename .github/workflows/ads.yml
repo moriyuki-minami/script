@@ -1,25 +1,24 @@
 name: auto_doreming_shussha
 
-on: [ workflow_dispatch ]
+on: [workflow_dispatch]
 
-#on:
-#  schedule:
-#   - cron: '0 0 * * 1,2,3,4,5'
+# on:
+#   schedule:
+#     - cron: '0 0 * * 1,2,3,4,5'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    　- name: Checkout
+      - name: checkout
         uses: actions/checkout@v3
-        
-    　- name: read csv
-      　run: |
-        pwd
-        ls
-        csv=`cat ./holidays.csv`
-
+      
+      - name: read csv
+        run: |
+          pwd
+          ls
+          csv=`cat ./holidays.csv`
+          
       - name: echo csv
         run: |
           echo "$csv"
