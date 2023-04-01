@@ -39,6 +39,6 @@ class TestDoreming():
     self.driver.find_element(By.CSS_SELECTOR, ".float-left > .icon-time_recorder").click()
     time.sleep(2)
     self.driver.find_element(By.CSS_SELECTOR, ".btn-success").click()
-    time.sleep(2)
+    time.sleep(5)
     self.driver.find_element(By.CSS_SELECTOR, ".btn-confirm-ok").click()
   
