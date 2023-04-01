@@ -20,7 +20,7 @@ jobs:
           #grep `date "+%Y/%-m/%-d",` ./holidays.csv > ./grep_result
           day=`date "+%Y\/%-m\/%-d"`
           echo ${day}
-          cat ./holidays.csv | sed -n -E -e '/2023\/4\/1,/p' > ./grep_result
+          cat ./holidays.csv | sed -n -E -e "/${day},/p" > ./grep_result
           ls -la
           cat ./grep_result
           
