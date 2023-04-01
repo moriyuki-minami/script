@@ -27,7 +27,6 @@ class TestDoreming():
   
   def test_doreming(self):
     self.driver.get("https://d.doreming.com/entrance/")
-    self.driver.set_window_size(1050, 716)
     self.driver.find_element(By.ID, "username").click()
     self.driver.find_element(By.ID, "username").send_keys("2004184281")
     self.driver.find_element(By.ID, "password").click()
