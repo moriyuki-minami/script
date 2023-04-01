@@ -14,7 +14,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestDoreming():
   def setup_method(self, method):
-    self.driver = webdriver.Chrome(executable_path="C:/Users/kuribayashi/Documents/rkuri/OLS/chromedriver/chromedriver.exe")
+    self.driver = webdriver.Chrome(executable_path="./chromedriver.exe")
     self.vars = {}
   
   def teardown_method(self, method):
