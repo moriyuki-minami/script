@@ -16,7 +16,10 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestDoreming():
   def setup_method(self, method):
-    self.driver = webdriver.Chrome(executable_path="/home/runner/work/script/script/chromedriver.exe")
+    options = ChromeOptions()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    self.driver = webdriver.Chrome(options=options)
     self.vars = {}
   
   def teardown_method(self, method):
