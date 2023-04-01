@@ -4,7 +4,9 @@ sys.dont_write_bytecode = True
 import pytest
 import time
 import json
+import chromedriver_binary
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
@@ -14,7 +16,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class TestDoreming():
   def setup_method(self, method):
-    self.driver = webdriver.Chrome(executable_path="./chromedriver.exe")
+    self.driver = webdriver.Chrome(executable_path="/home/runner/work/script/script/chromedriver.exe")
     self.vars = {}
   
   def teardown_method(self, method):
