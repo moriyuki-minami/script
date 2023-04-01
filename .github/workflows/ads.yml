@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: read csv
-        run: |
-          pwd
-          ls
-          csv=`cat ./holidays.csv`
+    　- name: Checkout
+        uses: actions/checkout@v3
+        
+    　- name: read csv
+      　run: |
+        pwd
+        ls
+        csv=`cat ./holidays.csv`
 
       - name: echo csv
         run: |
