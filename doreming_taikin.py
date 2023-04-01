@@ -4,7 +4,9 @@ sys.dont_write_bytecode = True
 import pytest
 import time
 import json
+from get_chrome_driver import GetChromeDriver
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
@@ -35,6 +37,6 @@ class TestDoreming():
     self.driver.find_element(By.CSS_SELECTOR, ".float-left > .icon-time_recorder").click()
     time.sleep(2)
     self.driver.find_element(By.CSS_SELECTOR, ".btn-danger").click()
-    time.sleep(2)
+    time.sleep(5)
     self.driver.find_element(By.CSS_SELECTOR, ".btn-confirm-ok").click()
   
