@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: read csv
         run: |
+          pwd
           csv=`cat ./holidays.csv`
 
       - name: echo csv
