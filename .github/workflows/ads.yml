@@ -1,6 +1,6 @@
 name: auto_doreming_shussha
 
-#on: [workflow_dispatch]
+on: [workflow_dispatch]
 
 on:
   schedule:
