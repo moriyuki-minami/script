@@ -40,5 +40,6 @@ class TestDoreming():
     time.sleep(2)
     self.driver.find_element(By.CSS_SELECTOR, ".btn-success").click()
     time.sleep(5)
-    self.driver.find_element(By.CSS_SELECTOR, ".btn-confirm-ok").click()
+    #確認ボタンが無くなったのでコメント化。(2024/03/20)
+    #self.driver.find_element(By.CSS_SELECTOR, ".btn-confirm-ok").click()
   
