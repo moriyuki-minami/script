@@ -1,10 +1,10 @@
 name: auto_doreming_shussha
 
-#on: [workflow_dispatch]
+on: [workflow_dispatch]
 
-on:
-  schedule:
-  - cron: '03 00 * * 1,2,3,4,5'
+#on:
+#  schedule:
+#  - cron: '03 00 * * 1,2,3,4,5'
 
 jobs:
   build:
